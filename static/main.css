@@ -1,0 +1,61 @@
+.site-header .navbar-brand {
+  color: #d89aa9;
+  font-size: 40px;
+  font-family: "Allura";
+}
+
+.bg-steel {
+  background-color: #fadade;
+}
+
+.site-header .navbar-nav .nav-link {
+  font-family: Georgia, serif;
+  color: #d89aa9;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  background-color: #d89aa9;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fadade;
+  color: #d89aa9;
+  font-family: Georgia, serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    line-height: 1;
+    margin: 32px 0px 8px;
+    font-family: "Allura";
+    color: #d89aa9;
+    font-size: 40px;
+    font-weight: normal;
+}
+h2 {
+    margin: 8px 0px;
+    font-family: Quicksand;
+    letter-spacing: 2px;
+    color: #d89aa9;
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+
