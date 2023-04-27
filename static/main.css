@@ -1,11 +1,18 @@
-.site-header .navbar-brand {
-  color: #d89aa9;
-  font-size: 40px;
-  font-family: "Allura";
+.brand-and {
+    font-family: 'Allura', cursive;
+    color:#d89aa9;
+  }
+
+.brand-initial {
+    font-size: 22px;
+    color:#d89aa9;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .bg-steel {
   background-color: #fadade;
+  position: relative;
+  z-index: 1;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -39,23 +46,34 @@ footer {
     text-align: center;
 }
 
-h1 {
-    line-height: 1;
-    margin: 32px 0px 8px;
-    font-family: "Allura";
-    color: #d89aa9;
-    font-size: 40px;
-    font-weight: normal;
-}
-h2 {
-    margin: 8px 0px;
-    font-family: Quicksand;
-    letter-spacing: 2px;
-    color: #d89aa9;
-    font-size: 24px;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+div img {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
 }
 
+body
+{
+    height: 100%;
+    margin:0;
+    padding:0;
+}
 
+@media only screen and (max-width: 768px) {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .brand-initial, .brand-and {
+        text-align: center;
+    }
+  }
+
+  .brand-and {
+    font-family: 'Allura', cursive;
+  }
+
+ 
