@@ -1,30 +1,55 @@
 {% extends "layout.html" %}
 {% block content %}
+
+<style>
+    .slide-up {
+        animation: slideUp 1.5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes slideUp {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
 <body style="background-color: #fadade; margin-left: 50px;margin-right: 50px;">
 
-    <div style="max-width: 800px;
+    <div class="slide-up" style="max-width: 800px;
     margin: 0 auto;
     margin-top: 100px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
-		<h1>Amazon Registry</h1>
-		<p>Please visit our Amazon registry to view our gift registry:</p>
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;">
+        <img src="../static/amazon.png" alt="amazon" style="max-width: 80%; padding-bottom: 25px; padding-top: 40px;">
 		<a href="https://www.amazon.com/wedding/giorgo-karamanis-cindy-samaan--february-2024/registry/8VTV0TGSQESX">
-		<button style="background-color:#f7c06c; color: #fff; border: none; padding: 15px 32px; font-size: 16px; cursor: pointer;">View our registry on Amazon</button>
+		<button type="button" class="btn btn-primary" style="background-color:#f7c06c; color: #fff; border: none; padding: 15px 32px; font-size: 16px; cursor: pointer; border-radius: 5px;">Shop Registry</button>
 		</a>
 	</div>
 
-    <div style="max-width: 800px;
+    <div class="slide-up" style="max-width: 800px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
-		<h1>Target Registry</h1>
-		<p>Please visit our Target registry to view our gift registry:</p>
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;">
+		<img src="../static/target.png" alt="amazon" style="max-width: 50%; padding-bottom: 25px; padding-top: 40px;">
 		<a href="https://www.target.com/gift-registry/gift/giorgo-cindy">
-		<button style="background-color:#cc0000; color: #fff; border: none; padding: 15px 32px; font-size: 16px; cursor: pointer;">View our registry on Target</button>
+		<button type="button" class="btn btn-primary" style="background-color:#cc0000; color: #fff; border: none; padding: 15px 32px; font-size: 16px; cursor: pointer; border-radius: 5px;">Shop Registry</button>
 		</a>
 	</div>
 

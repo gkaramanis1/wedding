@@ -6,7 +6,7 @@
 .brand-initial {
     font-size: 22px;
     color:#d89aa9;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand';
 }
 
 .bg-steel {
@@ -16,7 +16,7 @@
 }
 
 .site-header .navbar-nav .nav-link {
-  font-family: Georgia, serif;
+  font-family: 'Quicksand';
   color: #d89aa9;
 }
 
@@ -30,6 +30,10 @@
 
 .navbar-toggler {
   background-color: #d89aa9;
+}
+
+.navbar-toggler:hover {
+    opacity: 0.8;
 }
 
 footer {
@@ -46,13 +50,21 @@ footer {
     text-align: center;
 }
 
-div img {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:auto;
+.container p {
+    opacity: 0;
+    animation: slideUp 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 body
@@ -61,6 +73,10 @@ body
     margin:0;
     padding:0;
 }
+
+.btn:hover {
+    opacity: 0.8;
+  }
 
 @media only screen and (max-width: 768px) {
     img {
@@ -74,6 +90,10 @@ body
 
   .brand-and {
     font-family: 'Allura', cursive;
+  }
+
+  @media only screen and (min-width: 768px) {
+    
   }
 
  
