@@ -1,7 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
+
+<style>
+  .slide-up {
+      animation: slideUp 1.5s ease-in-out;
+      animation-fill-mode: forwards;
+  }
+  
+  @keyframes slideUp {
+      0% {
+          transform: translateY(20px);
+          opacity: 0;
+      }
+      100% {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+</style>
+
 <body style="background-color: #fadade;">
-  <div class="container-fluid" style="padding: 100px;">
+  <div class="slide-up" style="padding: 100px;">
       <div class="row justify-content-center">
           <div class="col-md-8">
               <p style="font-size: 25px; font-family: Quicksand; color: #d89aa9; padding-top: 50px; font-weight: normal; text-transform: uppercase; text-align: center;">HOW DO I RSVP?</p>
