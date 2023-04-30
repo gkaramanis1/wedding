@@ -2,45 +2,46 @@
 {% block content %}
 <style>
     .slide-up {
-        animation: slideUp 1s ease-in-out;
-        animation-fill-mode: forwards;
+        animation: slideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
     
     @keyframes slideUp {
-        0% {
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 </style>
 
-<body style="background-color: #fadade; margin-left: 50px;margin-right: 50px;">
+<body style="background-image: url('../static/background2.JPG');">
     <div class="container">
         <h1 class="slide-up" style="line-height: 1;
         margin: 32px 0px 8px;
         font-family: Allura;
-        color: #d89aa9;
+        color: whitesmoke;
         font-size: 40px;
         font-weight: normal;
-        padding-top: 100px;">Wedding Day</h1>
+        padding-top: 100px;
+        animation-delay: 0.2s;">Wedding Day</h1>
 
         <h2 class="slide-up" style="margin: 8px 0px;
         font-family: Quicksand;
         letter-spacing: 2px;
-        color: #d89aa9;
+        color: whitesmoke;
         font-size: 24px;
         font-weight: normal;
         text-transform: uppercase;
-        margin-bottom: 30px;">3:00 PM</h2>
+        margin-bottom: 30px;
+        animation-delay: 0.5s;">3:00 PM</h2>
 
-        <hr style="background-color:#d89aa9; opacity: 0.2;"/>
-        <p class="slide-up" style="font-size: 24px; color: #d89aa9; margin-top: 30px; margin-bottom: 30px;">RECEPTION TO FOLLOW</p>
-        <hr style="background-color:#d89aa9; opacity: 0.2;"/>
-        <p class="slide-up" style="font-size: 44px; font-family: Allura; color: #d89aa9; margin-top: 30px" >Attire: Cocktail</p>
+        <hr style="background-color: whitesmoke; opacity: 0.2;"/>
+        <p class="slide-up" style="font-size: 24px; color: whitesmoke; margin-top: 30px; margin-bottom: 30px; animation-delay: 0.8s;">RECEPTION TO FOLLOW</p>
+        <hr style="background-color: whitesmoke; opacity: 0.2;"/>
+        <p class="slide-up" style="font-size: 44px; font-family: Allura; color: whitesmoke; margin-top: 30px; animation-delay: 1.1s;">Attire: Cocktail</p>
     </div>
 </body>
     
