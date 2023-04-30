@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<body style="background-image: url('../static/background2.JPG');">
+    <div style="margin-top: 100px;">
+    <h1 style="font-family: 'Allura', cursive; font-size: 60px; text-align: center; color: #fff; margin-bottom: 20px;">Cindy &amp; Giorgo</h1>
+      <h2 style="font-family: 'Quicksand'; font-size: 35px; text-align: center; color: #fff; margin-bottom: 40px;">2.25.2024 <br> Daytona Beach, FL</h2>
+    </div>
+    <div class="image-container">
+      <img src="../static/wedding1.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.2s;">
+      <img src="../static/wedding3.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.5s;">
+      <img src="../static/wedding2.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.8s;">
+    </div>
+  </body>
+  
+  <style>
+    .image-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .image-container img {
+      margin: 10px;
+      animation: slideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .image-container img {
+        width: 250px;
+        height: 188px;
+      }
+    }
+  
+    @media screen and (max-width: 480px) {
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+{% endblock content %} 

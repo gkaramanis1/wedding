@@ -1,2 +1,6 @@
-/wedding
+/bin
+/include
+/lib
+/lib4
+/pyvenv.cfg
 __pycache__

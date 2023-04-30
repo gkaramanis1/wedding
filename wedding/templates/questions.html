@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    .slide-up {
+        animation: slideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+</style>
+
+<body style="background-image: url('../static/background2.JPG');">
+  <div class="container-fluid" style="padding: 100px;">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <p class="slide-up" style="font-size: 25px; font-family: Quicksand; color: whitesmoke; padding-top: 50px; font-weight: normal; text-transform: uppercase; text-align: center; animation-delay: 0.2s;">HOW DO I RSVP?</p>
+              <p class="slide-up" style="font-family: Quicksand; font-size: 16px; font-weight: normal; color: whitesmoke; animation-delay: 0.5s">Please navigate to the RSVP tab on our website, type in your last name to find your party to confirm or decline your invitation. If you have any questions, please contact us.</p>
+          
+              <p class="slide-up" style="font-size: 25px; font-family: Quicksand; color: whitesmoke;  font-weight: normal; text-transform: uppercase; text-align: center; padding-top: 50px; animation-delay: 0.8s">IS IT OKAY TO TAKE PICTURES OR VIDEOS WITH OUR PHONES AND CAMERAS DURING THE WEDDING?</p>
+              <p class="slide-up" style="font-family: Quicksand; font-size: 16px; font-weight: normal; color: whitesmoke; animation-delay: 1.1s">During the ceremony, we invite you to be fully present with us and enjoy the moment! We have hired an awesome photographer to capture our special moment for us, so please be cautious about keeping cell phones out of view for our entrance and exit. For the reception, we invite you to take as many photos as you'd like - we will have a special QR code for you to upload any photos you'd like to share with us!</p>
+          
+              <p class="slide-up" style="font-size: 25px; font-family: Quicksand; color: whitesmoke; font-weight: normal; text-transform: uppercase; text-align: center; padding-top: 50px; animation-delay: 1.4s">IS THE EVENT INDOORS OR OUTDOORS?</p>
+              <p class="slide-up" style="font-family: Quicksand; font-size: 16px; font-weight: normal; color: whitesmoke; animation-delay: 1.7s">Both the wedding service and reception will be indoors. The church and the reception venue are right next to each other, so your outdoors time in Florida during July will be limited (don't worry, both buildings have state of the art AC units)!</p>
+          
+              <p class="slide-up" style="font-size: 25px; font-family: Quicksand; color: whitesmoke;  font-weight: normal; text-transform: uppercase; text-align: center; padding-top: 50px; animation-delay: 2s">WHAT SHOULD I WEAR?</p>
+              <p class="slide-up" style="font-family: Quicksand; font-size: 16px; font-weight: normal; color: whitesmoke; animation-delay: 2.3s">Please dress in cocktail attire. In the church, we ask that you dress respectfully. If your dress is shoulderless and/or backless, a wrap or jacket for use in the church should be worn. At the reception, you may resume regular cocktail attire :)</p>
+          </div>
+      </div>
+  </div>
+</body>
+{% endblock content %}

@@ -1,50 +1,58 @@
 .brand-and {
     font-family: 'Allura', cursive;
-    color:#d89aa9;
+    color: whitesmoke;
   }
 
 .brand-initial {
     font-size: 22px;
-    color:#d89aa9;
+    color: whitesmoke;
     font-family: 'Quicksand';
 }
 
 .bg-steel {
-  background-color: #fadade;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+  background-color: rgba(0,0,0,1.0);
 }
 
 .site-header .navbar-nav .nav-link {
   font-family: 'Quicksand';
-  color: #d89aa9;
+  color: whitesmoke;
   font-size: 20px;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  opacity: 0.5;
 }
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
 
-.navbar-toggler {
-  background-color: #d89aa9;
-}
 
 .navbar-toggler:hover {
     opacity: 0.8;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #fadade;
-  color: #d89aa9;
-  font-family: Georgia, serif;
+.navbar-toggler {
+  border: none;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: rgba(0,0,0,1.0);
+}
+
+.footer-text {
+  font-family: 'Quicksand';
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
 }
 
 .container {
@@ -73,6 +81,9 @@ body
     height: 100%;
     margin:0;
     padding:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn:hover {
@@ -94,18 +105,4 @@ body
     font-family: 'Allura', cursive;
   }
   
-  .wrapper {
-    animation: scroll 70s linear infinite;
-    background: url("https://media.istockphoto.com/id/1200907979/vector/pink-marble-background-light-elegant-template-for-wedding-card-invitation-baby-birthday.jpg?s=612x612&w=0&k=20&c=M8DGkFRugZlv1_P64UqLvf5DU_2iTZdorM4x3ZOelfM="), #111111;
-    color: #eee;
-    height: 100vh;
-    min-width: 360px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
-    
-  }
   
