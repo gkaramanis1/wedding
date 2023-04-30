@@ -41,14 +41,18 @@
   border: none;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #fadade;
-  color: #d89aa9;
-  font-family: Georgia, serif;
+.footer {
+    margin-top: auto;
+    background-color: rgba(0,0,0,1.0);
+}
+
+.footer-text {
+  font-family: 'Quicksand';
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
 }
 
 .container {
@@ -77,6 +81,9 @@ body
     height: 100%;
     margin:0;
     padding:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn:hover {
@@ -98,18 +105,4 @@ body
     font-family: 'Allura', cursive;
   }
   
-  .wrapper {
-    animation: scroll 70s linear infinite;
-    background: url("/static/background.jpeg"), #111111;
-    color: #eee;
-    height: 100vh;
-    min-width: 360px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
-    opacity: 0.8;
-    }
   
