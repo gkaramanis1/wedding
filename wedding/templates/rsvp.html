@@ -1,36 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<body style="background-image: url('../static/background2.JPG');">
-    <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: whitesmoke;">Cindy & Giorgo's Wedding</h2>
-    <div style="font-size: 16px;
-    font-weight: normal;
-    font-family: Quicksand;
-    justify-content: center;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    color: whitesmoke;
-    margin-top: 20px;
-    font-size: 20px;">If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</div>
-  
-    {% if guests|length == 0 %}
-    <form action="/rsvp" method="POST" class="form-group text-center">
-        <div class="input-group d-flex justify-content-center">
-            <div style="max-width: 300px;">
-              <input type="text" id="name-search" name="name-search" placeholder="Name" class="form-control form-control-lg" required style="background-color: whitesmoke; border-color: whitesmoke;">
-            </div>
-          </div>
-          <div class="input-group">
-            <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #974C5E; border-color: #974C5E; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Find Your Invitation</button>
-          </div>
-      </form>
-    {% else %}
-        {% for guest in guests %}
-          <p>{{ guest.first_name }} {{ guest.last_name }}</p>
-        {% endfor %}
-    {% endif %}  
-
-</body>
+<form action="/rsvp" method="POST" class="form-group text-center">
+    {% for guest in guests %}
+        <div class="input-group">
+            <input>
+            <input>
+            <input>
+        </div>
+    {% endfor %}
+</form>
 
 {% endblock content %}
