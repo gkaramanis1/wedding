@@ -2,10 +2,9 @@
 {% block content %}
 
 <body style="background-image: url('../static/background2.JPG');">
-    <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: whitesmoke;">Cindy & Giorgo's Wedding</h2>
+    <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: whitesmoke; font-family: 'Allura', cursive;">Cindy & Giorgo's Wedding</h2>
     <div style="font-size: 16px;
-    font-weight: normal;
-    font-family: Quicksand;
+    font-family: 'Quicksand';
     justify-content: center;
     display: flex;
     align-items: flex-start;
@@ -15,27 +14,76 @@
     font-size: 20px;">If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</div>
   
     {% if guests|length == 0 %}
-      <form action="/find-invitation" method="POST" class="form-group text-center">
-        <div class="input-group d-flex justify-content-center">
-            <div style="max-width: 300px;">
-              <input type="text" id="name-search" name="name-search" placeholder="Name" class="form-control form-control-lg" required style="background-color: whitesmoke; border-color: whitesmoke;">
-            </div>
+    
+    <form action="/find-invitation" method="POST" class="form-group text-center" onsubmit="return validateForm()" novalidate>
+      <div class="input-group d-flex justify-content-center">
+        <div style="max-width: 300px;">
+          <input type="text" id="name-search" name="name-search" placeholder="Name" class="form-control form-control-lg" required style="background-color: whitesmoke; border-color: whitesmoke;">
         </div>
-        <div class="input-group">
-          <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #974C5E; border-color: #974C5E; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Find Your Invitation</button>
-        </div>
-      </form>
+      </div>
+      <div class="input-group">
+        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #AEC6CF; border-color: #AEC6CF; border-radius: 5px; cursor: pointer; margin-top: 30px; margin-bottom: 30px; width: 250px;">Find Your Invitation</button>
+      </div>
+    </form>
+    
+    <div id="alert-container" class="alert alert-danger alert-dismissible fade show d-none" role="alert" style="width: 250px; margin: 0 auto;">
+      You must enter your name!
+    </div>
+    
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name-search").value;
+        if (name == "") {
+          const alertContainer = document.getElementById("alert-container");
+          alertContainer.classList.remove("d-none");
+          alertContainer.classList.add("d-block");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    
+
     {% else %}
-        <form action="/rsvp" method="POST" class="form-group text-center">
-          <div class="input-group">
-            {% for guest in guests %}
-              <div class="input-group d-flex justify-content-center">
-                <input type="checkbox" name="{{ guest.id }}">{{ guest.first_name }} {{ guest.last_name }}</input>
-              </div>
-            {% endfor %}
-            <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #974C5E; border-color: #974C5E; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Continue</button>
+
+    <form action="/rsvp" method="POST" class="form-group text-center" onsubmit="return validateCheckbox()">
+      <div class="input-group">
+        {% for guest in guests %}
+          <div class="input-group justify-content-center" style="color: whitesmoke; font-size: 20px;"> 
+            <input type="checkbox" style="width: 25px; height: 25px; margin-right: 20px; accent-color: #AEC6CF;" name="{{ guest.id }}">{{ guest.first_name }} {{ guest.last_name }}</input>
           </div>
-        </form>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #AEC6CF; border-color: #AEC6CF; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px; margin-bottom: 30px;">Continue</button>
+      </div>
+    </form>
+    
+    <div id="alert-container" class="alert alert-danger alert-dismissible fade show d-none" role="alert" style="width: 250px; margin: 0 auto;">
+      Please select at least one guest.
+    </div>
+    
+    <script>
+      function validateCheckbox() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        let checked = false;
+    
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            checked = true;
+          }
+        });
+    
+        if (!checked) {
+          const alertContainer = document.getElementById("alert-container");
+          alertContainer.classList.remove("d-none");
+          alertContainer.classList.add("d-block");
+          return false;
+        }
+    
+        return true;
+      }
+    </script>    
+    
+    
     {% endif %}  
 
 </body>

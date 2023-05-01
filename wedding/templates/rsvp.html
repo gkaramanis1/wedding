@@ -1,23 +1,40 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<body style="background-image: url('../static/background2.JPG');">
+<h2 style="margin-top: 100px; text-align: center; color: whitesmoke; font-family: 'Allura', cursive;">Wedding Day</h2>
+<h6 style="text-align: center; color: whitesmoke; font-family: 'Quicksand';">at 3:00 PM</h4>
+<div style="margin: 50px;">
 <form action="/submit-rsvp" method="POST" class="form-group text-center">
     {% for guest in guests %}
-        <div class="input-group">
+        <div class="input-group" style="color: whitesmoke; margin-bottom: 30px;">
+                <div style="font-size: 25px; font-family: 'Quicksand'; margin-right: 10px;">
                 {{ guest.first_name }} {{ guest.last_name }}
-                <button onclick="toggleRSVP()" class="btn btn-primary btn-lg mx-auto d-block"  id="accepted">Accepted</button>
-                <button onclick="toggleRSVP()" class="btn btn-primary btn-lg mx-auto d-block"  id="declined">Declined</button>
-                <textarea id="allergies" placeholder="Allergies - Leave blank if none"></textarea>
+                </div>
+                <button onclick="toggleRSVP()" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #AEC6CF; border-color: #AEC6CF;height: 40px;
+                width: 124px;
+                font-size: 16px;
+                border-radius: 2px;" id="accepted">Accepted</button>
+                <button onclick="toggleRSVP()" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #AEC6CF; border-color: #AEC6CF; height: 40px;
+                width: 124px;
+                font-size: 16px;
+                border-radius: 2px;" id="declined">Declined</button>
+                <textarea id="allergies" class="form-control" style=" height: 40px;
+                width: 124px;
+                font-size: 16px; resize: none;" placeholder="Allergies - Leave blank if none"></textarea>
                 <input type="hidden" id="rsvp_value" name="rsvp_value">
+                
                 <script>
                     function toggleRSVP() {
                         // Here you are going to take in which button got clicked and set the value of the rsvp_value input element to whatever button got clicked and update the forecolor of both buttons.
+                        
                     }
                 </script>
         </div>
     {% endfor %}
 
-    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #974C5E; border-color: #974C5E; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Continue</button>
+    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #AEC6CF; border-color: #AEC6CF; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Continue</button>
 </form>
-
+</div>
+</body>
 {% endblock content %}

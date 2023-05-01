@@ -44,6 +44,7 @@
 .footer {
     margin-top: auto;
     background-color: rgba(0,0,0,1.0);
+    margin-bottom: 0;
 }
 
 .footer-text {
@@ -104,5 +105,3 @@ body
   .brand-and {
     font-family: 'Allura', cursive;
   }
-  
-  
