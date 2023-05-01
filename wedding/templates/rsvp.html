@@ -3,8 +3,8 @@
 
 <body style="background-image: url('../static/background2.JPG');">
 <h2 style="margin-top: 100px; text-align: center; color: whitesmoke; font-family: 'Allura', cursive;">Wedding Day</h2>
-<h6 style="text-align: center; color: whitesmoke; font-family: 'Quicksand';">at 3:00 PM</h4>
-<div style="margin: 50px;">
+<h6 style="text-align: center; color: whitesmoke; font-family: 'Quicksand';margin-bottom: 30px;">at 3:00 PM</h4>
+<container style="max-width: 800px; margin: 0 auto">
 <form action="/submit-rsvp" method="POST" class="form-group text-center">
     {% for guest in guests %}
         <div class="input-group" style="color: whitesmoke; margin-bottom: 30px;">
@@ -20,8 +20,8 @@
                 font-size: 16px;
                 border-radius: 2px;" id="declined">Declined</button>
                 <textarea id="allergies" class="form-control" style=" height: 40px;
-                width: 124px;
-                font-size: 16px; resize: none;" placeholder="Allergies - Leave blank if none"></textarea>
+                max-width: 200px;
+                font-size: 16px; resize: none; border-radius: 2px;" placeholder="List Allergies"></textarea>
                 <input type="hidden" id="rsvp_value" name="rsvp_value">
                 
                 <script>
@@ -35,6 +35,38 @@
 
     <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #AEC6CF; border-color: #AEC6CF; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Continue</button>
 </form>
-</div>
+</container>
+
+<style>
+    @media screen and (max-width: 768px) {
+      h2 {
+        font-size: 30px;
+      }
+      h6 {
+        font-size: 20px;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .input-group > div {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .btn {
+        height: 30px;
+        width: 100px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      #allergies {
+        height: 30px;
+        width: 120px;
+        font-size: 14px;
+      }
+    }
+</style>
+
 </body>
 {% endblock content %}
