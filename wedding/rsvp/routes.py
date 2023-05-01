@@ -30,3 +30,9 @@ def rsvp():
     selected_guests = list(filter(lambda guest: guest.id in guest_ids, Guest.query.all()))            
 
     return render_template('rsvp.html', guests=selected_guests)
+
+@rsvps.route("/submit-rsvp",methods=['POST'])
+def submit_rsvp():
+    # Once you get the RSVP, you take in the form data here and put it all in your database.
+
+    return redirect("/home")

@@ -1,14 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<form action="/rsvp" method="POST" class="form-group text-center">
+<form action="/submit-rsvp" method="POST" class="form-group text-center">
     {% for guest in guests %}
         <div class="input-group">
-            <input>
-            <input>
-            <input>
+                {{ guest.first_name }} {{ guest.last_name }}
+                <button onclick="toggleRSVP()" class="btn btn-primary btn-lg mx-auto d-block"  id="accepted">Accepted</button>
+                <button onclick="toggleRSVP()" class="btn btn-primary btn-lg mx-auto d-block"  id="declined">Declined</button>
+                <textarea id="allergies" placeholder="Allergies - Leave blank if none"></textarea>
+                <input type="hidden" id="rsvp_value" name="rsvp_value">
+                <script>
+                    function toggleRSVP() {
+                        // Here you are going to take in which button got clicked and set the value of the rsvp_value input element to whatever button got clicked and update the forecolor of both buttons.
+                    }
+                </script>
         </div>
     {% endfor %}
+
+    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #974C5E; border-color: #974C5E; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Continue</button>
 </form>
 
 {% endblock content %}
