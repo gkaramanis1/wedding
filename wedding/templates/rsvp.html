@@ -14,43 +14,48 @@
                 <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="border-color: #779ecb;height: 40px;
                 width: 124px;
                 font-size: 16px;
-                border-radius: 2px;" id="accepted">Accepted</button>
+		border-radius: 2px;" id="{{ guest.id }}_accepted">Accepted</button>
 
                 <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="height: 40px;
                 width: 124px;
                 font-size: 16px;
-                border-radius: 2px;" id="declined">Declined</button>
+		border-radius: 2px;" id="{{ guest.id }}_declined">Declined</button>
 
-                <textarea id="allergies" class="form-control" style=" height: 40px;
+		<textarea id="{{ guest.id }}_allergies" name="{{ guest.id }}_allergies" class="form-control" style=" height: 40px;
                 max-width: 200px;
                 font-size: 16px; resize: none; border-radius: 2px;" placeholder="List Allergies"></textarea>
                 <input type="hidden" id="{{ guest.id }}_rsvp" name="{{ guest.id }}_rsvp">
-                <script>
-                    function toggleRSVP(button) {
-                        // Here you are going to take in which button got clicked and set the value of the rsvp_value input element to whatever button got clicked and update the forecolor of both buttons.
-                        var accepted = document.getElementById('accepted')
-                        var declined = document.getElementById('declined')
-
-
-                        if (button != null) {
-                            if (button.id == 'accepted') {
-                                accepted.classList.add('btn-primary')
-                                accepted.classList.remove('btn-outline-primary')
-                                declined.classList.add('btn-outline-primary')
-                                declined.classList.remove('btn-primary')
-                            } else if (button.id == 'declined') {
-                                declined.classList.add('btn-primary')
-                                declined.classList.remove('btn-outline-primary')
-                                accepted.classList.add('btn-outline-primary')
-                                accepted.classList.remove('btn-primary')
-                            }
-
-                        } 
-                    }
-                </script>
         </div>
     {% endfor %}
 
+	<script>
+	    function toggleRSVP(button) {
+		if (button == null) return;
+
+		// Get the guest ID by string.
+		var buttonId = button.id;
+		var guestId = buttonId.substring(0, buttonId.indexOf("_"))
+
+		// Here you are going to take in which button got clicked and set the value of the rsvp_value input element to whatever button got clicked and update the forecolor of both buttons.
+		var accepted = document.getElementById(guestId + '_accepted')
+		var declined = document.getElementById(guestId + '_declined')
+
+		    if (buttonId == guestId + '_accepted') {
+			accepted.classList.add('btn-primary')
+			accepted.classList.remove('btn-outline-primary')
+			declined.classList.add('btn-outline-primary')
+			declined.classList.remove('btn-primary')
+			document.getElementById(guestId + '_rsvp').value = true;
+		    } else if (buttonId == guestId + '_declined') {
+			declined.classList.add('btn-primary')
+			declined.classList.remove('btn-outline-primary')
+			accepted.classList.add('btn-outline-primary')
+			accepted.classList.remove('btn-primary')
+			document.getElementById(guestId + '_rsvp').value = false;
+		    }
+
+	    }
+	</script>
     <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #779ecb; border-color: #779ecb; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Submit</button>
 </form>
 </container>
