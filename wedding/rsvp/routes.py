@@ -43,7 +43,10 @@ def submit_rsvp():
         if guest_id is not None:
             guest = next((guest for guest in Guest.query.all() if guest.id == int(guest_id)), None)
             if guest:
-                setattr(guest, val_id, response_value)
+                if val_id == "allergies":
+                    guest.update({val_id: response_value})
+                else if val_id == "response":
+                    guest.update({val_id: bool(response_value)})
 
         print(response_id)
         print(type(response_value))
