@@ -44,13 +44,13 @@
 			accepted.classList.remove('btn-outline-primary')
 			declined.classList.add('btn-outline-primary')
 			declined.classList.remove('btn-primary')
-			document.getElementById(guestId + '_rsvp').value = true;
+			document.getElementById(guestId + '_response').value = true;
 		    } else if (buttonId == guestId + '_declined') {
 			declined.classList.add('btn-primary')
 			declined.classList.remove('btn-outline-primary')
 			accepted.classList.add('btn-outline-primary')
 			accepted.classList.remove('btn-primary')
-			document.getElementById(guestId + '_rsvp').value = false;
+			document.getElementById(guestId + '_response').value = false;
 		    }
 
 	    }

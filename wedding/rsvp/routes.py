@@ -34,6 +34,7 @@ def rsvp():
 @rsvps.route("/submit-rsvp",methods=['POST'])
 def submit_rsvp():
     # Once you get the RSVP, you take in the form data here and put it all in your database.
+    print(request.form)
     for response_id, response_value in request.form.items():
         # Get the guest's ID in this key value pair and the value ID. Example: 3_allergies -> guest_id = 3, val_id = allergies
         guest_id = response_id[:response_id.index("_")]
@@ -44,9 +45,12 @@ def submit_rsvp():
             guest = next((guest for guest in Guest.query.all() if guest.id == int(guest_id)), None)
             if guest:
                 if val_id == "allergies":
-                    guest.update({val_id: response_value})
-                else if val_id == "response":
-                    guest.update({val_id: bool(response_value)})
+                    setattr(guest, val_id, response_value)
+                elif val_id == "response":
+                    if response_value == 'true':
+                        setattr(guest, val_id, True)
+                    if response_value == 'false':
+                        setattr(guest, val_id, False) 
 
         print(response_id)
         print(type(response_value))
