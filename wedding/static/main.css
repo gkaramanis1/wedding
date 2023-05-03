@@ -105,3 +105,12 @@ body
   .brand-and {
     font-family: 'Allura', cursive;
   }
+
+  .btn-primary {
+    background-color: #779ecb;
+  }
+
+  .btn-outline-primary {
+    border-color: #779ecb;
+    color: #779ecb;
+  }

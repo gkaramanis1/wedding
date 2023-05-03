@@ -10,9 +10,9 @@ def findInvitation():
 
 @rsvps.route("/find-invitation",methods=['POST'])
 def findGuest():
-    name_search = request.form['name-search']
+    name_search = request.form['name-search'].casefold()
     print("Name input: ", name_search)
-    guest_search = list(filter(lambda guest: guest.first_name in name_search or guest.last_name in name_search, Guest.query.all()))
+    guest_search = list(filter(lambda guest: guest.first_name.casefold() in name_search or guest.last_name.casefold() in name_search, Guest.query.all()))
 
     return render_template('find_invitation.html',guests=guest_search)
 
@@ -34,5 +34,8 @@ def rsvp():
 @rsvps.route("/submit-rsvp",methods=['POST'])
 def submit_rsvp():
     # Once you get the RSVP, you take in the form data here and put it all in your database.
-    print(request.form)
+    for response_id, response_value in request.form.items():
+        print(response_id)
+        print(response_value)
+
     return redirect("/home")

@@ -4,7 +4,6 @@
 <body style="background-image: url('../static/background2.JPG');">
 <h2 style="margin-top: 100px; text-align: center; color: whitesmoke; font-family: 'Allura', cursive;">Wedding Day</h2>
 <h6 style="text-align: center; color: whitesmoke; font-family: 'Quicksand';margin-bottom: 30px;">at 3:00 PM</h4>
-<container style="margin: 0 auto">
 <form action="/submit-rsvp" method="POST" class="form-group text-center">
     {% for guest in guests %}
         <div class="input-group" style="color: whitesmoke; margin-bottom: 30px;">
@@ -14,12 +13,12 @@
                 <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="border-color: #779ecb;height: 40px;
                 width: 124px;
                 font-size: 16px;
-		border-radius: 2px;" id="{{ guest.id }}_accepted">Accepted</button>
+		border-radius: 2px;" id="{{ guest.id }}_accepted">Accept</button>
 
                 <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="height: 40px;
                 width: 124px;
                 font-size: 16px;
-		border-radius: 2px;" id="{{ guest.id }}_declined">Declined</button>
+		border-radius: 2px;" id="{{ guest.id }}_declined">Decline</button>
 
 		<textarea id="{{ guest.id }}_allergies" name="{{ guest.id }}_allergies" class="form-control" style=" height: 40px;
                 max-width: 200px;
@@ -56,7 +55,7 @@
 
 	    }
 	</script>
-    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #779ecb; border-color: #779ecb; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Submit</button>
+    <button type="submit" class="btn btn-primary btn-sm mx-auto d-block" style="background-color: #779ecb; border-color: #779ecb; border-radius: 5px; cursor: pointer; margin-top: 30px; width: 250px;">Submit</button>
 </form>
 </container>
 
@@ -83,9 +82,9 @@
         font-size: 14px;
         margin-bottom: 10px;
       }
-      #allergies {
+      .input-group .form-control {
         height: 30px;
-        width: 120px;
+        width: 200px;
         font-size: 14px;
       }
     }
