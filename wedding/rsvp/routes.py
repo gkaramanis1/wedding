@@ -35,7 +35,19 @@ def rsvp():
 def submit_rsvp():
     # Once you get the RSVP, you take in the form data here and put it all in your database.
     for response_id, response_value in request.form.items():
+        # Get the guest's ID in this key value pair and the value ID. Example: 3_allergies -> guest_id = 3, val_id = allergies
+        guest_id = response_id.substring(0, response_id.indexOf("_"))
+        val_id = response_id.substring(response_id.indexOf("_"), len(response_id))
+
+        # Get the guest from the SQL Alchemy load and set the values based on what came through in the request.
+        if guest_id is not None:
+            guest = next(lambda guest: guest.id == int(guest_id), Guest.query.all())
+            guest.update({val_id: response_value})
+
         print(response_id)
         print(response_value)
+
+    # Now that you've updated all of the guests, commit the changes to the database.
+    db.session.commit()
 
     return redirect("/home")
