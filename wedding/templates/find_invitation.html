@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
 
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <div class="alert alert-success alert-dismissible mx-auto" style="margin-top: 100px;">
+              {{ msg }}
+              <button type="button" class="btn-close float-end" data-dismiss="alert" aria-label="Close"></button>
+          </div>
+          
+            {% endfor %}
+         {% endif %}       
+    {% endwith %}
+
 <body style="background-image: url('../static/background2.JPG');">
     <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: whitesmoke; font-family: 'Allura', cursive;">Cindy & Giorgo's Wedding</h2>
     <div style="font-size: 16px;

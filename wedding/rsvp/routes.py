@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, Blueprint
+from flask import render_template, redirect, request, Blueprint, flash
 from wedding import db
 from wedding.models import Guest,Family
 
@@ -57,5 +57,5 @@ def submit_rsvp():
 
     # Now that you've updated all of the guests, commit the changes to the database.
     db.session.commit()
-
-    return redirect("/")
+    flash('Thanks for submitting your RSVP!')
+    return redirect("/find-invitation")
