@@ -14,11 +14,19 @@
                 width: 124px;
                 font-size: 16px;
 		border-radius: 2px;" id="{{ guest.id }}_accepted">Accept</button>
-
+                
                 <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="border-color: #2E402D; height: 40px;
                 width: 124px;
                 font-size: 16px;
 		border-radius: 2px; margin-left: 15px;" id="{{ guest.id }}_declined">Decline</button>
+
+                <style>
+                .btn:hover, .btn:focus {
+                  background-color: #2E402D;
+                  border-color: #2E402D;
+                  box-shadow: none;
+                }
+                </style>
 
 		<textarea id="{{ guest.id }}_allergies" name="{{ guest.id }}_allergies" class="form-control" style=" height: 40px;
                 max-width: 200px;
