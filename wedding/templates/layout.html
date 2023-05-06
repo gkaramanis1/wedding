@@ -12,9 +12,16 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Allura"
+    />
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
 
     {% if title %}
     <title>{{ title }}</title>
@@ -27,8 +34,10 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-steel py-2">
         <div class="container">
           <a class="navbar-brand mr-4" href="/">
-            <span class="brand-initial">C</span><span class="brand-and"> and </span><span class="brand-initial">&nbsp;G</span>
-            </a>
+            <span class="brand-initial">C</span
+            ><span class="brand-and"> and </span
+            ><span class="brand-initial">&nbsp;G</span>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -41,13 +50,11 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              
-            </div>
+            <div class="navbar-nav mr-auto"></div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav ms-auto">
-              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>  
-              <a class="nav-item nav-link" href="/schedule">Schedule</a>  
+              <a class="nav-item nav-link" href="/">Home</a>
+              <a class="nav-item nav-link" href="/schedule">Schedule</a>
               <a class="nav-item nav-link" href="/questions">Q + A</a>
               <a class="nav-item nav-link" href="/travel">Travel</a>
               <a class="nav-item nav-link" href="/registry">Registry</a>
@@ -61,43 +68,59 @@
     {% block content %}{% endblock content %}
 
     <footer class="footer">
-      <p class="footer-text">Cindy Samaan & Giorgo Karamanis's Wedding Website | Made by Giorgo Karamanis</p>
+      <p class="footer-text">
+        Cindy Samaan & Giorgo Karamanis's Wedding Website | Made by Giorgo
+        Karamanis
+      </p>
     </footer>
 
-      <script>
-        $(document).ready(function () {
-          var url = window.location.pathname;
-          // Will only work if string in href matches with location
-          $('ul.navbar-nav a[href="' + url + '"]').addClass('active');
-      
-          // Will also work for relative and absolute hrefs
-          $('ul.navbar-nav a').filter(function () {
-              return this.href == url;
-          }).addClass('active');
-      
-          window.addEventListener('scroll', function() {
-            if (window.scrollY > 0) {
-              document.getElementById('navbar_top').classList.add('fixed-top');
-              // add padding top to show content behind navbar
-              navbar_height = document.querySelector('.navbar').offsetHeight;
-              document.body.style.paddingTop = navbar_height + 'px';
-            } else {
-              document.getElementById('navbar_top').classList.remove('fixed-top');
-               // remove padding top from body
-              document.body.style.paddingTop = '0';
-            } 
-          });
-      
-          // Ensures that the page shows the top on load.
-          $(this).scrollTop(0);
-        });
-      </script>
-      
-    <!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var url = window.location.pathname;
+        // Will only work if string in href matches with location
+        $('ul.navbar-nav a[href="' + url + '"]').addClass("active");
 
-<!-- Include Bootstrap JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        // Will also work for relative and absolute hrefs
+        $("ul.navbar-nav a")
+          .filter(function () {
+            return this.href == url;
+          })
+          .addClass("active");
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 0) {
+            document.getElementById("navbar_top").classList.add("fixed-top");
+            // add padding top to show content behind navbar
+            navbar_height = document.querySelector(".navbar").offsetHeight;
+            document.body.style.paddingTop = navbar_height + "px";
+          } else {
+            document.getElementById("navbar_top").classList.remove("fixed-top");
+            // remove padding top from body
+            document.body.style.paddingTop = "0";
+          }
+        });
+
+        // Ensures that the page shows the top on load.
+        $(this).scrollTop(0);
+      });
+    </script>
+
+    <script>
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      const navbarTogglerIcon = navbarToggler.querySelector(
+        ".navbar-toggler-icon"
+      );
+
+      navbarToggler.addEventListener("click", function () {
+        navbarTogglerIcon.classList.toggle("open");
+      });
+    </script>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>

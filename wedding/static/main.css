@@ -1,11 +1,11 @@
 .brand-and {
     font-family: 'Allura', cursive;
-    color: whitesmoke;
+    color: #2E402D;
   }
 
 .brand-initial {
     font-size: 22px;
-    color: whitesmoke;
+    color: #2E402D;
     font-family: 'Quicksand';
 }
 
@@ -15,45 +15,67 @@
         left: 0;
         right: 0;
         z-index: 1000;
-  background-color: rgba(0,0,0,1.0);
+  background-color: #F6F5F1;
 }
 
 .site-header .navbar-nav .nav-link {
   font-family: 'Quicksand';
-  color: whitesmoke;
+  color: #2E402D;
   font-size: 20px;
 }
 
-.site-header .navbar-nav .nav-link:hover {
-  opacity: 0.5;
+.navbar-nav .nav-link:hover {
+  color: #779ecb !important;
 }
 
-.site-header .navbar-nav .nav-link.active {
-  font-weight: 500;
+.site-header .navbar-nav .nav-link {
+  position: relative;
 }
 
-
-.navbar-toggler:hover {
-    opacity: 0.8;
+.site-header .navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  background-color: #2E402D;
+  transition: all 0.3s ease-in-out;
 }
 
-.navbar-toggler {
-  border: none;
+.site-header .navbar-nav .nav-item.active .nav-link::after,
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  background-color: rgba(46, 64, 45, 0.3);
+  left: 0;
 }
 
 .footer {
     margin-top: auto;
-    background-color: rgba(0,0,0,1.0);
+    background-color: #F6F5F1;
     margin-bottom: 0;
 }
 
 .footer-text {
   font-family: 'Quicksand';
-  color: whitesmoke;
+  color: #2E402D;
   font-size: 15px;
   text-align: center;
   padding: 20px;
   margin: 0;
+}
+
+.bg-steel .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(46, 64, 45, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.bg-steel .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon.open {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(46, 64, 45, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
 }
 
 .container {
@@ -107,10 +129,10 @@ body
   }
 
   .btn-primary {
-    background-color: #779ecb;
+    background-color: #2E402D;
   }
 
   .btn-outline-primary {
-    border-color: #779ecb;
-    color: #779ecb;
+    border-color: #2E402D;
+    color: #2E402D;
   }
