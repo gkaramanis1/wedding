@@ -16,7 +16,7 @@
 <body style="background-color: #F6F5F1">
     <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: #2E402D; font-family: 'Allura', cursive;">Cindy & Giorgo's Wedding</h2>
     <div style="font-size: 16px;
-    font-family: 'Quicksand';
+    font-family: 'Corbel', sans-serif;
     justify-content: center;
     display: flex;
     align-items: flex-start;
@@ -63,7 +63,7 @@
       <div class="input-group">
         {% for guest in guests %}
           <div class="input-group justify-content-center" style="color: #2E402D; font-size: 20px;"> 
-            <input type="checkbox" style="width: 25px; height: 25px; margin-right: 20px; accent-color: #2E402D; display: block; margin-bottom: 10px; margin-top: 10px;" name="{{ guest.id }}">{{ guest.first_name }} {{ guest.last_name }}
+            <input type="checkbox" style=" width: 25px; height: 25px; margin-right: 20px; accent-color: #2E402D; display: block; margin-bottom: 10px; margin-top: 10px;" name="{{ guest.id }}">{{ guest.first_name }} {{ guest.last_name }}
           </div>
         {% endfor %}
         <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #2E402D; border-color: #2E402D; border-radius: 5px; cursor: pointer; margin-top: 20px; width: 200px; height: 40px;margin-bottom: 30px; font-size: 16px;">Continue</button>
