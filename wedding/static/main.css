@@ -29,7 +29,7 @@
 }
 
 .site-header .navbar-nav .nav-link {
-  position: relative;
+  position: relative !important;
 }
 
 .site-header .navbar-nav .nav-link::after {
