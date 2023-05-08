@@ -52,6 +52,14 @@
   left: 0;
 }
 
+.site-header .navbar-nav .nav-item.active {
+  border-bottom: 2px solid #2E402D;
+  bottom: -1px;
+  display: block;
+  left: 0;
+  color: #2E402D;
+}
+
 .footer {
     margin-top: auto;
     background-color: #F6F5F1;
