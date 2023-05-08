@@ -12,6 +12,8 @@
       crossorigin="anonymous"
     />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Allura"
@@ -52,14 +54,14 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto"></div>
             <!-- Navbar Right Side -->
-            <div class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto">
               <a class="nav-item nav-link" href="/">Home</a>
               <a class="nav-item nav-link" href="/schedule">Schedule</a>
               <a class="nav-item nav-link" href="/questions">Q + A</a>
               <a class="nav-item nav-link" href="/travel">Travel</a>
               <a class="nav-item nav-link" href="/registry">Registry</a>
               <a class="nav-item nav-link" href="/find-invitation">RSVP</a>
-            </div>
+            </ul>
           </div>
         </div>
       </nav>
@@ -86,6 +88,7 @@
             return this.href == url;
           })
           .addClass("active");
+          console.log('yo')
 
         window.addEventListener("scroll", function () {
           if (window.scrollY > 0) {

@@ -42,6 +42,12 @@
     <div id="alert-container" class="alert alert-danger alert-dismissible fade show d-none" role="alert" style="width: 250px; margin: 0 auto;">
       You must enter your name!
     </div>
+
+      {% if no_invitation_found %}
+      <div id="none-found" class="alert alert-danger alert-dismissible fade show d-block" role="alert" style="width: 250px; margin: 0 auto;">
+        No invitation found! Please contact us!
+      </div>
+      {% endif %}
     
     <script>
       function validateForm() {

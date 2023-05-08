@@ -7,18 +7,19 @@
 <form action="/submit-rsvp" method="POST" class="form-group text-center mx-auto">
     {% for guest in guests %}
         <div class="input-group" style="color: #2E402D; margin-bottom: 30px;">
-                <div style="font-size: 25px; font-family: 'Corbel', sans-serif; font-weight: 300; margin-right: 15px;">
+                <div class="col-4" style="font-size: 25px; font-family: 'Corbel', sans-serif; font-weight: 300; margin-right: 15px;">
                 {{ guest.first_name }} {{ guest.last_name }}
                 </div>
-                <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="border-color: #2E402D; height: 40px;
-                width: 124px;
-                font-size: 16px;
-		border-radius: 2px;" id="{{ guest.id }}_accepted">Accept</button>
+                    <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg d-block col-4" style="border-color: #2E402D; height: 40px;
+                                    width: 124px;
+                                    font-size: 16px;
+                            border-radius: 2px;" id="{{ guest.id }}_accepted">Accept</button>
+                            &nbsp;
+                    <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg d-block col-4" style="border-color: #2E402D; height: 40px;
+                    width: 124px;
+                    font-size: 16px;
+                    border-radius: 2px;" id="{{ guest.id }}_declined">Decline</button>
                 
-                <button type="button" onclick="toggleRSVP(this)" class="btn btn-primary btn-lg mx-auto d-block" style="border-color: #2E402D; height: 40px;
-                width: 124px;
-                font-size: 16px;
-		border-radius: 2px; margin-left: 15px;" id="{{ guest.id }}_declined">Decline</button>
 
                 <style>
                 .btn:hover, .btn:focus {
@@ -28,7 +29,7 @@
                 }
                 </style>
 
-		<textarea id="{{ guest.id }}_allergies" name="{{ guest.id }}_allergies" class="form-control" style=" height: 40px;
+		<textarea id="{{ guest.id }}_allergies" name="{{ guest.id }}_allergies" class="form-control col-4" style=" height: 40px;
                 max-width: 200px;
                 font-size: 16px; resize: none; border-radius: 2px; border-color: #2E402D; margin-left: 15px;" placeholder="List Allergies"></textarea>
                 <input type="hidden" id="{{ guest.id }}_response" name="{{ guest.id }}_response">

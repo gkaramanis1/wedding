@@ -13,16 +13,18 @@ def findGuest():
     name_search = request.form['name-search'].casefold()
     print("Name input: ", name_search)
     guest_search = list(filter(lambda guest: guest.first_name.casefold() in name_search or guest.last_name.casefold() in name_search, Guest.query.all()))
-
-    return render_template('find_invitation.html',guests=guest_search)
+    none_found = (len(guest_search) == 0)
+    print("none found: ", none_found)
+    return render_template('find_invitation.html',guests=guest_search,no_invitation_found=none_found)
 
 @rsvps.route("/rsvp",methods=['POST'])
 def rsvp():
     # Get the selected IDs from the HTML form through the request.
     guest_ids = []
+    
     if request.form is not None:
         for selected in request.form:
-            id = selected[0]
+            id = selected
             if id is not None:
                 guest_ids.append(int(id))
 
