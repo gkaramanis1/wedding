@@ -59,5 +59,5 @@ def submit_rsvp():
 
     # Now that you've updated all of the guests, commit the changes to the database.
     db.session.commit()
-    flash('Thanks for submitting your RSVP!')
+    flash('Thank you for submitting your RSVP!')
     return redirect("/find-invitation")
