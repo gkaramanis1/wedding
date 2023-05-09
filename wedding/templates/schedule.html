@@ -1,10 +1,49 @@
 {% extends "layout.html" %}
 {% block content %}
 <style>
-    .slide-up {
-        animation: slideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    body {
+      background-color: #F6F5F1;
+    }
+
+    h1 {
+      font-family: 'Allura', cursive;
+      font-size: 60px;
+      text-align: center;
+      color: #2E402D;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: 'Corbel', sans-serif;
+      font-size: 25px;
+      font-weight: 300;
+      text-align: center;
+      color: #2E402D;
+      margin-bottom: 20px;
     }
     
+    h3 {
+      font-family: 'Corbel', sans-serif;
+      font-size: 25px;
+      font-weight: 300;
+      text-align: center;
+      color: #2E402D;
+      margin-bottom: 30px;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 100px;
+      margin-top: 100px;
+    }
+
+    .image-container img {
+      margin: 10px;
+      animation: slideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
     @keyframes slideUp {
       0% {
         transform: translateY(100%);
@@ -15,36 +54,83 @@
         opacity: 1;
       }
     }
-</style>
 
-<body style="background-color: #F6F5F1;">
-    <div class="container">
-        <h1 class="slide-up" style="line-height: 1;
-        margin: 32px 0px 8px;
-        font-family: Allura;
-        color: #2E402D;
+    @media screen and (max-width: 768px) {
+      h1 {
         font-size: 40px;
-        font-weight: normal;
-        padding-top: 100px;
-        animation-delay: 0.2s;">Wedding Day</h1>
+      }
 
-        <h2 class="slide-up" style="margin: 8px 0px;
-        font-family: 'Corbel', sans-serif;
-        font-weight: 300;
-        letter-spacing: 2px;
-        color: #2E402D;
-        font-size: 24px;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-        animation-delay: 0.5s;">2:00 PM</h2>
+      h2 {
+        font-size: 20px;
+      }
 
-        <hr style="background-color: #2E402D; opacity: 0.2; margin: 0 auto;
-        width: 50%;"/>
-        <p class="slide-up" style="font-weight: 300; font-size: 24px; color: #2E402D; margin-top: 30px; margin-bottom: 30px; animation-delay: 0.8s;">RECEPTION TO FOLLOW</p>
-        <hr style="background-color: #2E402D; opacity: 0.2; margin: 0 auto;
-        width: 50%;"/>
-        <p class="slide-up" style="font-size: 44px; font-family: Allura; color: #2E402D; margin-top: 30px; animation-delay: 1.1s;">Attire: Cocktail</p>
-    </div>
+      h3 {
+        font-size: 20px;
+    
+      }
+      .image-container img {
+        width: 250px;
+        height: 188px;
+      }
+      
+    }
+
+    @media screen and (min-width: 768px) {
+        h1 {
+            position: relative;
+            margin-top: -75px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .header {
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background-color: transparent;
+    }
+
+    .flower {
+      width: 100%;
+      max-height: 260px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="image-container">
+    <img src="../static/wedding1.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.2s;">
+    <img src="../static/wedding3.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.5s;">
+    <img src="../static/wedding2.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.8s;">
+  </div>
+
+  <script>
+    window.onload = function() {
+        window.scrollTo(0, 0);
+    }
+    </script>
+
 </body>
     
 {% endblock content %}

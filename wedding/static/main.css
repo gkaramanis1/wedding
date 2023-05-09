@@ -1,11 +1,11 @@
 .brand-and {
     font-family: 'Allura', cursive;
-    color: #2E402D;
+    color: #2F4F4F;
   }
 
 .brand-initial {
     font-size: 30px;
-    color: #2E402D;
+    color: #2F4F4F;
     font-family: 'Allura', cursive;
 }
 
@@ -20,13 +20,13 @@
 
 .site-header .navbar-nav .nav-link {
   font-family: 'Corbel', sans-serif;
-  color: #2E402D;
+  color: #2F4F4F;
   font-size: 20px;
   font-weight: 300;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #bfc3a6 !important;
+  color: #2F4F4F !important;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -41,7 +41,7 @@
   position: absolute;
   bottom: -1px;
   left: 50%;
-  background-color: #2E402D;
+  background-color: #2F4F4F;
   transition: all 0.3s ease-in-out;
 }
 
@@ -53,23 +53,23 @@
 }
 
 .site-header .navbar-nav .nav-item.active {
-  border-bottom: 2px solid #2E402D;
+  border-bottom: 2px solid #2F4F4F;
   bottom: -1px;
   display: block;
   left: 0;
-  color: #2E402D;
+  color: #2F4F4F;
 }
 
 .footer {
     margin-top: auto;
     background-color: #F6F5F1;
     margin-bottom: 0;
-    border-top: 1px solid #2E402D;
+    border-top: 1px solid #2F4F4F;
 }
 
 .footer-text {
   font-family: 'Corbel', sans-serif;
-  color: #2E402D;
+  color: #2F4F4F;
   font-size: 15px;
   text-align: center;
   padding: 20px;
@@ -77,7 +77,7 @@
 }
 
 .bg-steel .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(46, 64, 45, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(47, 79, 79, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 .bg-steel .navbar-toggler:focus {
@@ -85,7 +85,7 @@
 }
 
 .navbar-toggler-icon.open {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(46, 64, 45, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(47, 79, 79, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
 }
 
 .container {
@@ -139,10 +139,10 @@ body
   }
 
   .btn-primary {
-    background-color: #2E402D;
+    background-color: #2F4F4F;
   }
 
   .btn-outline-primary {
-    border-color: #2E402D;
-    color: #2E402D;
+    border-color: #2F4F4F;
+    color: #2F4F4F;
   }

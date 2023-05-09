@@ -9,8 +9,9 @@
       font-family: 'Allura', cursive;
       font-size: 60px;
       text-align: center;
-      color: #2E402D;
+      color: #2F4F4F;
       margin-bottom: 15px;
+      margin-top: 50px;
     }
 
     h2 {
@@ -18,7 +19,7 @@
       font-size: 25px;
       font-weight: 300;
       text-align: center;
-      color: #2E402D;
+      color: #2F4F4F;
       margin-bottom: 20px;
     }
     
@@ -27,32 +28,17 @@
       font-size: 25px;
       font-weight: 300;
       text-align: center;
-      color: #2E402D;
+      color: #2F4F4F;
       margin-bottom: 30px;
     }
 
     .image-container {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 100px;
+      margin-bottom: 60px;
     }
 
-    .image-container img {
-      margin: 10px;
-      animation: slideUp 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
 
-    @keyframes slideUp {
-      0% {
-        transform: translateY(100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
 
     @media screen and (max-width: 768px) {
       h1 {
@@ -67,17 +53,20 @@
         font-size: 20px;
     
       }
-      .image-container img {
-        width: 250px;
-        height: 188px;
-      }
       
     }
 
     @media screen and (min-width: 768px) {
         h1 {
             position: relative;
-            margin-top: -75px;
+            
+        }
+        .image-container img{
+            max-width: 1200px;
+            max-height: 2099px;
+        }
+        .description {
+            font-size: 40px;
         }
     }
 
@@ -94,10 +83,6 @@
         font-size: 20px;
       }
 
-      .image-container img {
-        width: 100%;
-        height: auto;
-      }
     }
 
     .header {
@@ -118,16 +103,44 @@
 </head>
 <body>
   <div class="header"></div>
-  <img class="flower" src="../static/flower.png" alt="flower" style="position: relative; top: 35px;">
   <div style="margin-top: 60px;">
     <h1>Cindy &amp; Giorgo</h1>
-    <h2>February 25, 2024 <strong>·</strong> Daytona Beach, FL</h2>
+    <h2>2.25.2024 <strong>·</strong> Daytona Beach, FL</h2>
     <h3 id="countdown"></h3>
   </div>
   <div class="image-container">
-    <img src="../static/wedding1.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.2s;">
-    <img src="../static/wedding3.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.5s;">
-    <img src="../static/wedding2.jpeg" alt="wedding" style="width: 400px; height: 600px; animation-delay: 0.8s;">
+    <img src="../static/landscape.jpeg" alt="wedding">
+  </div>
+  <div class="description" style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
+    <div style="margin: 0; padding: 0;  font-family: 'Corbel', sans-serif; color: #2F4F4F; font-weight: 300;">February 25, 2024</div>
+    <hr style="border-left: 1px solid #2F4F4F; height: 100px; margin: 0 20px; opacity: 0.8;"/>
+    <div style="margin: 0; padding: 0;  font-family: 'Corbel', sans-serif; color: #2F4F4F; font-weight: 300;">Daytona Beach, FL</div>
+  </div>
+  <div style="margin-bottom: 60px;">
+    <div style="
+        font-family: 'Allura', cursive;
+        font-weight: 300;
+        color: #2F4F4F;
+        text-align: center;
+        font-size: 30px;
+        ">Wedding Day</div>
+    <div style="
+        font-family: 'Corbel', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        color: #2F4F4F;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        ">2:00 PM</div>
+
+        <hr style="background-color: #2F4F4F; opacity: 0.2; margin: 0 auto;
+        width: 50%;"/>
+        <p style="font-weight: 300; font-size: 20px; color: #2F4F4F; margin-top: 30px; margin-bottom: 30px; text-align: center;">RECEPTION TO FOLLOW</p>
+        <hr style="background-color: #2F4F4F; opacity: 0.2; margin: 0 auto;
+        width: 50%;"/>
+        <p style="font-size: 25px; font-family: Allura; color: #2F4F4F; margin-top: 30px; text-align: center; margin-bottom: 30px;">Attire: Cocktail</p>
+    </div>
   </div>
 </body>
 
