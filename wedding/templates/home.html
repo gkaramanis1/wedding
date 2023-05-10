@@ -40,9 +40,9 @@
 
 
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       h1 {
-        font-size: 40px;
+        font-size: 50px;
       }
 
       h2 {
@@ -53,7 +53,21 @@
         font-size: 20px;
     
       }
-      
+      .description {
+            flex-direction: column;
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 120px;
+            margin-top: 50px;
+        }
+    
+      .description hr {
+            transform: rotate(90deg);
+            height: 250px;
+            margin-bottom: -170px;
+            margin-top: -170px;
+        }
+    
     }
 
     @media screen and (min-width: 768px) {
@@ -65,8 +79,15 @@
             max-width: 1200px;
             max-height: 2099px;
         }
+        
         .description {
-            font-size: 40px;
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+
+        .description hr {
+            height: 100px; 
+            margin: 0 20px;
         }
     }
 
@@ -95,10 +116,6 @@
       background-color: transparent;
     }
 
-    .flower {
-      width: 100%;
-      max-height: 260px;
-    }
   </style>
 </head>
 <body>
@@ -109,12 +126,12 @@
     <h3 id="countdown"></h3>
   </div>
   <div class="image-container">
-    <img src="../static/landscape.jpeg" alt="wedding">
+    <img src="../static/landscape1.jpeg" alt="wedding">
   </div>
-  <div class="description" style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
-    <div style="margin: 0; padding: 0;  font-family: 'Corbel', sans-serif; color: #2F4F4F; font-weight: 300;">February 25, 2024</div>
-    <hr style="border-left: 1px solid #2F4F4F; height: 100px; margin: 0 20px; opacity: 0.8;"/>
-    <div style="margin: 0; padding: 0;  font-family: 'Corbel', sans-serif; color: #2F4F4F; font-weight: 300;">Daytona Beach, FL</div>
+  <div class="description" style="display: flex; justify-content: center; align-items: center;">
+    <div style="font-family: 'Corbel', sans-serif; color: #2F4F4F; font-weight: 300;">February 25, 2024</div>
+    <hr style="border-left: 1px solid #2F4F4F; opacity: 0.8;"/>
+    <div style="font-family: 'Corbel', sans-serif; color: #2F4F4F; font-weight: 300;">Daytona Beach, FL</div>
   </div>
   <div style="margin-bottom: 100px;">
     <div style="
