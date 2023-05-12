@@ -25,6 +25,16 @@
       href="{{ url_for('static', filename='main.css') }}"
     />
 
+    <meta name="title" property="og:title" content="Our Wedding - Cindy and Giorgo" />
+        <meta name="description" content="Our wedding website" />
+        <meta property="og:type" content="Website" />
+        <meta
+            name="image"
+            property="og:image"
+            content="https://cindygiorgo.com/static/landscape.jpeg"
+        />
+        <meta name="author" content="Giorgo Karamanis" />
+
     {% if title %}
     <title>{{ title }}</title>
     {% else %}
