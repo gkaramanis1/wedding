@@ -1,8 +1,8 @@
 from wedding import create_app
-from dotenv import load_env
+from dotenv import load_dotenv
 
 # Load environment variables.
-load_env()
+load_dotenv()
 
 # Create app.
 app = create_app()
