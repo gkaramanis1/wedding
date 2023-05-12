@@ -1,6 +1,8 @@
 from flask import render_template, redirect, request, Blueprint, flash
 from wedding import db
 from wedding.models import Guest,Family
+import subprocess
+import datetime
 
 rsvps = Blueprint('rsvp', __name__)
 
@@ -36,7 +38,7 @@ def rsvp():
 @rsvps.route("/submit-rsvp",methods=['POST'])
 def submit_rsvp():
     # Once you get the RSVP, you take in the form data here and put it all in your database.
-    print(request.form)
+    notification = ""
     for response_id, response_value in request.form.items():
         # Get the guest's ID in this key value pair and the value ID. Example: 3_allergies -> guest_id = 3, val_id = allergies
         guest_id = response_id[:response_id.index("_")]
@@ -46,16 +48,22 @@ def submit_rsvp():
         if guest_id is not None:
             guest = next((guest for guest in Guest.query.all() if guest.id == int(guest_id)), None)
             if guest:
+                # Set the last updated time.
+                guest.last_updated = datetime.datetime.now()
+                # Set allergies based on form response.
                 if val_id == "allergies":
                     setattr(guest, val_id, response_value)
+                # Set RSVP response based on form response.
                 elif val_id == "response":
                     if response_value == 'true':
                         setattr(guest, val_id, True)
+                        notification = notification + u'\u2705' + "  " + guest.first_name + " " + guest.last_name + "\n"
                     if response_value == 'false':
                         setattr(guest, val_id, False) 
+                        notification = notification + u'\u274C' + "  " + guest.first_name + " " + guest.last_name + "\n"
 
-        print(response_id)
-        print(type(response_value))
+    print(notification)
+    #subprocess.run(["echo \"" + notification + "\" | mail 4074174097@txt.att.net"])
 
     # Now that you've updated all of the guests, commit the changes to the database.
     db.session.commit()
