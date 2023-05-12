@@ -62,8 +62,8 @@ def submit_rsvp():
                         setattr(guest, val_id, False)
                         notification = notification + u'\u274C' + "  " + guest.first_name + " " + guest.last_name + "\n"
 
-    print(notification)
-    subprocess.run("echo \"" + notification + "\" | mail 4074174097@mms.att.net",shell=True)
+    #print(notification)
+    subprocess.run("echo \"" + notification + "\" | /usr/bin/mail 4074174097@mms.att.net",shell=True)
 
     # Now that you've updated all of the guests, commit the changes to the database.
     db.session.commit()
