@@ -23,7 +23,7 @@ def findGuest():
 def rsvp():
     # Get the selected IDs from the HTML form through the request.
     guest_ids = []
-    
+
     if request.form is not None:
         for selected in request.form:
             id = selected
@@ -59,11 +59,11 @@ def submit_rsvp():
                         setattr(guest, val_id, True)
                         notification = notification + u'\u2705' + "  " + guest.first_name + " " + guest.last_name + "\n"
                     if response_value == 'false':
-                        setattr(guest, val_id, False) 
+                        setattr(guest, val_id, False)
                         notification = notification + u'\u274C' + "  " + guest.first_name + " " + guest.last_name + "\n"
 
     print(notification)
-    #subprocess.run(["echo \"" + notification + "\" | mail 4074174097@txt.att.net"])
+    subprocess.run("echo \"" + notification + "\" | mail 4074174097@mms.att.net",shell=True)
 
     # Now that you've updated all of the guests, commit the changes to the database.
     db.session.commit()

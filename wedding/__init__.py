@@ -1,12 +1,13 @@
 from flask import Flask,render_template
 from flask_sqlalchemy import SQLAlchemy
-from wedding.config import Config
+import os
 
 db = SQLAlchemy()
 
-def create_app(config_class=Config):
+def create_app():
     app = Flask(__name__)
-    app.config.from_object(Config)
+    app.config['SECRET_KEY'] = os.environ.get('WEDDING_SECRET_KEY')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('WEDDINGDB')
 
     db.init_app(app)
 
