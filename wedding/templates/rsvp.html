@@ -19,7 +19,7 @@
                     width: 124px;
                     font-size: 16px;
                     border-radius: 2px;" id="{{ guest.id }}_declined">Decline</button>
-                
+
 
                 <style>
                 .btn:hover, .btn:focus {
@@ -33,9 +33,10 @@
                 max-width: 200px;
                 font-size: 16px; resize: none; border-radius: 2px; border-color: #a3742c; margin-left: 15px;" placeholder="List Allergies"></textarea>
                 <input type="hidden" id="{{ guest.id }}_response" name="{{ guest.id }}_response">
-        </div>
+	</div>
     {% endfor %}
 
+      	<input name="message_to_couple" id="message_to_couple" width="200px" height="100px" type="text" placeholder="Write a message to Cindy and Giorgo!">
 	<script>
 	    function toggleRSVP(button) {
 		if (button == null) return;
@@ -80,13 +81,13 @@
             }
             return true;
         }
-    
+
         document.querySelector('form').addEventListener('submit', function(event) {
             if (!checkRSVP()) {
                 event.preventDefault();
                 var alert = document.getElementById('alert-container');
                 alert.classList.remove('d-none');
-    
+
             }
         });
     </script>
@@ -141,7 +142,7 @@
         max-width: 800px;
         padding: 15px;
         }
-        
+
     }
 </style>
 

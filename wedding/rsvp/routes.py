@@ -39,6 +39,8 @@ def rsvp():
 def submit_rsvp():
     # Once you get the RSVP, you take in the form data here and put it all in your database.
     notification = ""
+    message_to_couple = request.form["message_to_couple"]
+
     for response_id, response_value in request.form.items():
         # Get the guest's ID in this key value pair and the value ID. Example: 3_allergies -> guest_id = 3, val_id = allergies
         guest_id = response_id[:response_id.index("_")]
@@ -50,6 +52,8 @@ def submit_rsvp():
             if guest:
                 # Set the last updated time.
                 guest.last_updated = datetime.datetime.now()
+                # Set the message to the couple that the person wrote.
+                guest.message = message_to_couple
                 # Set allergies based on form response.
                 if val_id == "allergies":
                     setattr(guest, val_id, response_value)
