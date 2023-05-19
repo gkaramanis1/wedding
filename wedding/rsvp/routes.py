@@ -1,6 +1,6 @@
 from flask import render_template, redirect, request, Blueprint, flash
 from wedding import db
-from wedding.models import Guest,Family
+from wedding.models import Guest
 import subprocess
 import datetime
 
@@ -47,7 +47,7 @@ def submit_rsvp():
         val_id = response_id[response_id.index("_")+1:]
 
         # Get the guest from the SQL Alchemy load and set the values based on what came through in the request.
-        if guest_id is not None:
+        if guest_id is not None and guest_id.isnumeric():
             guest = next((guest for guest in Guest.query.all() if guest.id == int(guest_id)), None)
             if guest:
                 # Set the last updated time.
@@ -66,7 +66,7 @@ def submit_rsvp():
                         setattr(guest, val_id, False)
                         notification = notification + u'\u274C' + "  " + guest.first_name + " " + guest.last_name + "\n"
 
-    #print(notification)
+    # Add running total to notification.
     subprocess.run("echo \"" + notification + "\" | /usr/bin/mail 4074174097@mms.att.net",shell=True)
 
     # Now that you've updated all of the guests, commit the changes to the database.
