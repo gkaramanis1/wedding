@@ -15,7 +15,7 @@
         left: 0;
         right: 0;
         z-index: 1000;
-  background-color: #e9edea;
+  background-color: #F9F4F2;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -49,6 +49,7 @@
   width: 100%;
   background-color: rgba(99, 119, 157, 1);
   left: 0;
+  height: 1.4px;
 }
 
 .site-header .navbar-nav .nav-item.active {
@@ -61,7 +62,7 @@
 
 .footer {
     margin-top: auto;
-    background-color: #e9edea;
+    background-color: #F9F4F2;
     margin-bottom: 0;
     border-top: 1px solid #63779D;
 }
