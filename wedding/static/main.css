@@ -1,11 +1,11 @@
 .brand-and {
     font-family: 'Allura', cursive;
-    color: #a3742c;
+    color: #63779D;
   }
 
 .brand-initial {
     font-size: 30px;
-    color: #a3742c;
+    color: #63779D;
     font-family: 'Allura', cursive;
 }
 
@@ -15,18 +15,18 @@
         left: 0;
         right: 0;
         z-index: 1000;
-  background-color: #F6F5F1;
+  background-color: #e9edea;
 }
 
 .site-header .navbar-nav .nav-link {
   font-family: 'Corbel', sans-serif;
-  color: #a3742c;
+  color: #63779D;
   font-size: 20px;
   font-weight: 300;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #a3742c !important;
+  color: #63779D !important;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -41,35 +41,34 @@
   position: absolute;
   bottom: -1px;
   left: 50%;
-  background-color: #a3742c;
-  transition: all 0.3s ease-in-out;
+  background-color: #63779D;
 }
 
 .site-header .navbar-nav .nav-item.active .nav-link::after,
 .navbar-nav .nav-link:hover::after {
   width: 100%;
-  background-color: rgba(163, 116, 44, 1);
+  background-color: rgba(99, 119, 157, 1);
   left: 0;
 }
 
 .site-header .navbar-nav .nav-item.active {
-  border-bottom: 2px solid #a3742c;
+  border-bottom: 2px solid #63779D;
   bottom: -1px;
   display: block;
   left: 0;
-  color: #a3742c;
+  color: #63779D;
 }
 
 .footer {
     margin-top: auto;
-    background-color: #F6F5F1;
+    background-color: #e9edea;
     margin-bottom: 0;
-    border-top: 1px solid #a3742c;
+    border-top: 1px solid #63779D;
 }
 
 .footer-text {
   font-family: 'Corbel', sans-serif;
-  color: #a3742c;
+  color: #63779D;
   font-size: 15px;
   text-align: center;
   padding: 20px;
@@ -77,7 +76,7 @@
 }
 
 .bg-steel .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(163, 116, 44, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 119, 157, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 .bg-steel .navbar-toggler:focus {
@@ -85,7 +84,7 @@
 }
 
 .navbar-toggler-icon.open {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(163, 116, 44, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(99, 119, 157, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
 }
 
 .container {
@@ -139,10 +138,10 @@ body
   }
 
   .btn-primary {
-    background-color: #a3742c;
+    background-color: #63779D;
   }
 
   .btn-outline-primary {
-    border-color: #a3742c;
-    color: #a3742c;
+    border-color: #63779D;
+    color: #63779D;
   }
