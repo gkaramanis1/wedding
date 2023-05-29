@@ -2,20 +2,20 @@
 {% block content %}
 
 <body style="background-color: #F9F4F2;">
-<h2 style="margin-top: 100px; text-align: center; color: #63779D; font-family: 'Allura', cursive;">Wedding Day</h2>
-<h6 style="text-align: center; color: #63779D; font-family: 'Quicksand';margin-bottom: 30px;">at 2:00 PM</h4>
+<h2 style="margin-top: 100px; text-align: center; color: #1E3F66; font-family: 'Allura', cursive;">Wedding Day</h2>
+<h6 style="text-align: center; color: #1E3F66; font-family: 'Quicksand';margin-bottom: 30px;">at 2:00 PM</h4>
 <form action="/submit-rsvp" method="POST" class="form-group text-center mx-auto">
     {% for guest in guests %}
-        <div class="input-group" style="color: #63779D; margin-bottom: 30px;">
+        <div class="input-group" style="color: #1E3F66; margin-bottom: 30px;">
                 <div class="col-4" style="font-size: 25px; font-family: 'Corbel', sans-serif; font-weight: 300; margin-right: 15px;">
                 {{ guest.first_name }} {{ guest.last_name }}
                 </div>
-                    <button type="button" onclick="toggleRSVP(this)" class="btn btn-outline-primary btn-lg d-block col-4" style="border-color: #63779D; height: 40px;
+                    <button type="button" onclick="toggleRSVP(this)" class="btn btn-outline-primary btn-lg d-block col-4" style="border-color: #1E3F66; height: 40px;
                                     width: 124px;
                                     font-size: 16px;
                             border-radius: 2px;" id="{{ guest.id }}_accepted">Accept</button>
                             &nbsp;
-                    <button type="button" onclick="toggleRSVP(this)" class="btn btn-outline-primary btn-lg d-block col-4" style="border-color: #63779D; height: 40px;
+                    <button type="button" onclick="toggleRSVP(this)" class="btn btn-outline-primary btn-lg d-block col-4" style="border-color: #1E3F66; height: 40px;
                     width: 124px;
                     font-size: 16px;
                     border-radius: 2px;" id="{{ guest.id }}_declined">Decline</button>
@@ -23,20 +23,20 @@
 
                 <style>
                 .btn:hover, .btn:focus {
-                  background-color: #63779D;
-                  border-color: #63779D;
+                  background-color: #1E3F66;
+                  border-color: #1E3F66;
                   box-shadow: none;
                 }
                 </style>
 
 		<textarea id="{{ guest.id }}_allergies" name="{{ guest.id }}_allergies" class="form-control col-4" style=" height: 40px;
                 max-width: 200px;
-                font-size: 16px; resize: none; border-radius: 2px; border-color: #63779D; margin-left: 15px;" placeholder="List Allergies"></textarea>
+                font-size: 16px; resize: none; border-radius: 2px; border-color: #1E3F66; margin-left: 15px;" placeholder="List Allergies"></textarea>
                 <input type="hidden" id="{{ guest.id }}_response" name="{{ guest.id }}_response">
 	</div>
     {% endfor %}
 
-      	<textarea name="message_to_couple" id="message_to_couple" class="form-control mx-auto d-block" style="width: 300px; height: 100px; border-color: #63779D; border-radius: 2px;" type="text" placeholder="Write a message to Cindy and Giorgo!"></textarea>
+      	<textarea name="message_to_couple" id="message_to_couple" class="form-control mx-auto d-block" style="width: 300px; height: 100px; border-color: #1E3F66; border-radius: 2px;" type="text" placeholder="Write a message to Cindy and Giorgo!"></textarea>
 	<script>
 	    function toggleRSVP(button) {
 		if (button == null) return;
@@ -65,7 +65,7 @@
 
 	    }
 	</script>
-    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #63779D; border-color: #63779D; border-radius: 5px; cursor: pointer; margin-top: 40px; width: 200px; height: 40px; font-size: 16px;">Submit</button>
+    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #1E3F66; border-color: #1E3F66; border-radius: 5px; cursor: pointer; margin-top: 40px; width: 200px; height: 40px; font-size: 16px;">Submit</button>
 
     <div id="alert-container" class="alert alert-danger alert-dismissible fade show d-none" role="alert" style="width: 250px; margin: 0 auto; padding-left: 40px; margin-top: 30px;">
         Please complete the RSVP form!

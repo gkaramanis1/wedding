@@ -1,11 +1,11 @@
 .brand-and {
     font-family: 'Allura', cursive;
-    color: #63779D;
+    color: #1E3F66;
   }
 
 .brand-initial {
     font-size: 30px;
-    color: #63779D;
+    color: #1E3F66;
     font-family: 'Allura', cursive;
 }
 
@@ -20,13 +20,13 @@
 
 .site-header .navbar-nav .nav-link {
   font-family: 'Corbel', sans-serif;
-  color: #63779D;
+  color: #1E3F66;
   font-size: 20px;
   font-weight: 300;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #63779D !important;
+  color: #1E3F66 !important;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -41,35 +41,35 @@
   position: absolute;
   bottom: -1px;
   left: 50%;
-  background-color: #63779D;
+  background-color: #1E3F66;
 }
 
 .site-header .navbar-nav .nav-item.active .nav-link::after,
 .navbar-nav .nav-link:hover::after {
   width: 100%;
-  background-color: rgba(99, 119, 157, 1);
+  background-color: rgba(30, 63, 102, 1);
   left: 0;
   height: 1.4px;
 }
 
 .site-header .navbar-nav .nav-item.active {
-  border-bottom: 2px solid #63779D;
+  border-bottom: 1.4px solid #1E3F66;
   bottom: -1px;
   display: block;
   left: 0;
-  color: #63779D;
+  color: #1E3F66;
 }
 
 .footer {
     margin-top: auto;
     background-color: #F9F4F2;
     margin-bottom: 0;
-    border-top: 1px solid #63779D;
+    border-top: 1px solid #1E3F66;
 }
 
 .footer-text {
   font-family: 'Corbel', sans-serif;
-  color: #63779D;
+  color: #1E3F66;
   font-size: 15px;
   text-align: center;
   padding: 20px;
@@ -77,7 +77,7 @@
 }
 
 .bg-steel .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 119, 157, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(30, 63, 102, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 .bg-steel .navbar-toggler:focus {
@@ -85,7 +85,7 @@
 }
 
 .navbar-toggler-icon.open {
-  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(99, 119, 157, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(30, 63, 102, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
 }
 
 .container {
@@ -139,10 +139,10 @@ body
   }
 
   .btn-primary {
-    background-color: #63779D;
+    background-color: #1E3F66;
   }
 
   .btn-outline-primary {
-    border-color: #63779D;
-    color: #63779D;
+    border-color: #1E3F66;
+    color: #1E3F66;
   }

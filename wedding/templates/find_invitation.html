@@ -14,14 +14,14 @@
     {% endwith %}
 
 <body style="background-color: #F9F4F2">
-    <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: #63779D; font-family: 'Allura', cursive;">Cindy & Giorgo's Wedding</h2>
+    <h2 style="margin-top: 100px; text-align: center; font-family: Quicksand; font-size: 30px; color: #1E3F66; font-family: 'Allura', cursive;">Cindy & Giorgo's Wedding</h2>
     <div style="font-size: 16px;
     font-family: 'Corbel', sans-serif;
     justify-content: center;
     display: flex;
     align-items: flex-start;
     margin-bottom: 30px;
-    color: #63779D;
+    color: #1E3F66;
     margin-top: 20px;
     font-size: 20px;
     margin-left: 15px;">If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.</div>
@@ -31,11 +31,11 @@
     <form action="/find-invitation" method="POST" class="form-group text-center" onsubmit="return validateForm()" novalidate>
       <div class="input-group d-flex justify-content-center">
         <div style="max-width: 300px;">
-          <input type="text" id="name-search" name="name-search" placeholder="Name" class="form-control form-control-lg" required style="background-color: #F9F4F2; border-color: #63779D;">
+          <input type="text" id="name-search" name="name-search" placeholder="Name" class="form-control form-control-lg" required style="background-color: #F9F4F2; border-color: #1E3F66;">
         </div>
       </div>
       <div class="input-group">
-        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #63779D; border-color: #63779D; border-radius: 5px; cursor: pointer; margin-top: 30px; margin-bottom: 30px; width: 250px;">Find Your Invitation</button>
+        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #1E3F66; border-color: #1E3F66; border-radius: 5px; cursor: pointer; margin-top: 30px; margin-bottom: 30px; width: 250px;">Find Your Invitation</button>
       </div>
     </form>
     
@@ -68,11 +68,11 @@
     <form action="/rsvp" method="POST" class="form-group text-center" onsubmit="return validateCheckbox()">
       <div class="input-group">
         {% for guest in guests %}
-          <div class="input-group justify-content-center" style="color: #63779D; font-size: 20px;"> 
-            <input type="checkbox" style="width: 25px; height: 25px; margin-right: 20px; accent-color: #63779D; display: block; margin-bottom: 10px; margin-top: 10px;" name="{{ guest.id }}">{{ guest.first_name }} {{ guest.last_name }}
+          <div class="input-group justify-content-center" style="color: #1E3F66; font-size: 20px;"> 
+            <input type="checkbox" style="width: 25px; height: 25px; margin-right: 20px; accent-color: #1E3F66; display: block; margin-bottom: 10px; margin-top: 10px;" name="{{ guest.id }}">{{ guest.first_name }} {{ guest.last_name }}
           </div>
         {% endfor %}
-        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #63779D; border-color: #63779D; border-radius: 5px; cursor: pointer; margin-top: 20px; width: 200px; height: 40px;margin-bottom: 30px; font-size: 16px;">Continue</button>
+        <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" style="background-color: #1E3F66; border-color: #1E3F66; border-radius: 5px; cursor: pointer; margin-top: 20px; width: 200px; height: 40px;margin-bottom: 30px; font-size: 16px;">Continue</button>
       </div>
     </form>
     
