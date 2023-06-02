@@ -1,3 +1,4 @@
+'''
 from flask import render_template, redirect, request, Blueprint, flash
 from wedding import db
 from wedding.models import Guest
@@ -73,3 +74,4 @@ def submit_rsvp():
     db.session.commit()
     flash('Thank you for submitting your RSVP!')
     return redirect("/find-invitation")
+'''

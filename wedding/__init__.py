@@ -31,7 +31,7 @@ def create_app():
     def registry():
         return render_template('registry.html')
 
-    from wedding.rsvp.routes import rsvps
-    app.register_blueprint(rsvps)
+    # from wedding.rsvp.routes import rsvps
+    # app.register_blueprint(rsvps)
 
     return app
